@@ -7,7 +7,7 @@ from utils import image
 def region(view):
     height = view.shape[0]
     polygons = np.array([
-        [(100, height), (900, height), (500, 300)]
+        [(30, height), (600, height), (300, 120)]
     ])
     mask = np.zeros_like(view)
     cv2.fillPoly(mask, polygons, 255)
@@ -43,6 +43,6 @@ def coordinates(view, line_parameters):
     return np.array([x1, y1, x2, y2])
 
 
-def setImage():
-    plt.imshow("result", region(image.canny()))
-    plt.show()
+# def setImage():
+#     plt.imshow("result", region(image.canny()))
+#     plt.show()
