@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
-from utils import image
-from utils import coordinates
+from utilidades import image
+from utilidades import coordinates
 
 
 image = cv2.imread("ajustment_image.jpg")
