@@ -8,12 +8,9 @@ def canny(image):
     canny_img = cv2.Canny(blur, 50, 150)
     return canny_img
 
-imag = cv2.imread("ajustment_image.jpg")
+imag = cv2.imread("capture.jpg")
 lane_image = np.copy(imag)
 canny_image = canny(lane_image)
 
 plt.imshow(canny_image)
 plt.show()
-
-# 30-600
-# y 130

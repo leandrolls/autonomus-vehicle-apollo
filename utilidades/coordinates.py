@@ -1,13 +1,10 @@
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-from utilidades import image
-
 
 def region(view):
     height = view.shape[0]
     polygons = np.array([
-        [(30, height), (600, height), (300, 120)]
+        [(30, height), (650, height), (330, 150)]
     ])
     mask = np.zeros_like(view)
     cv2.fillPoly(mask, polygons, 255)
@@ -47,8 +44,3 @@ def coordinates(view, line_parameters):
     x1 = int((y1 - intercept) / slope)
     x2 = int((y2 - intercept) / slope)
     return np.array([x1, y1, x2, y2])
-
-
-# def setImage():
-#     plt.imshow("result", region(image.canny()))
-#     plt.show()
